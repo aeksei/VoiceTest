@@ -9,4 +9,8 @@ if __name__ == "__main__":
     def send_welcome(message):
         bot.reply_to(message, "Howdy, how are you doing?")
 
+    @bot.message_handler(content_types=['text'])
+    def send_welcome(message):
+        bot.reply_to(message, "Howdy, how are you doing?")
+
     bot.polling(none_stop=False, interval=0, timeout=20)
